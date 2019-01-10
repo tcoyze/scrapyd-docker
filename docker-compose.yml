@@ -1,0 +1,10 @@
+version: '2'
+services:
+  scrapyd:
+    image: 'scrapyd:latest'
+    restart: always
+    ports:
+      - '6800:6800'
+    volumes:
+      - .scrapyd/lib:/var/lib/scrapyd
+      - .scrapyd/log:/var/log/scrapyd
